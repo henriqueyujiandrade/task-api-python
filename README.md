@@ -39,15 +39,19 @@ Esse Teste consiste em um projeto Back End, onde é possível cadastrar um usuá
 
 3.2.1 - Crie um novo banco com nome de sua preferência no PostgreSQL
 
-3.2.2 - Clone esse repositório, entre na pasta raiz do projeto e entre no ambiente virtual do projeto com o comando abaixo:
+3.2.2 - Clone esse repositório, entre na pasta raiz do projeto e crie o ambiente virtual do projeto com o comando abaixo:
+
+`python -m venv venv`
+
+3.2.3 - Dentro da pasta raiz do projeto, entre no ambiente virtual do projeto com o comando abaixo:
 
 `source venv/bin/activate`
 
-3.2.3 - Instale as dependências requisitadas no arquivo requirements.txt utilizando o seguinte comando:
+3.2.4 - Instale as dependências requisitadas no arquivo requirements.txt utilizando o seguinte comando:
 
 `pip install -r requirements.txt`
 
-3.2.4 Crie um arquivo na raiz do projeto chamado .env e altere as variáveis de ambiente conforme o .env.example do projeto
+3.2.5 Crie um arquivo na raiz do projeto chamado .env e altere as variáveis de ambiente conforme o .env.example do projeto
 
 exemplo:
 
@@ -58,7 +62,7 @@ POSTGRES_PASSWORD='minhasenhadobanco'
 
 ```
 
-3.2.4 Para rodar o servidor utilize o comando `python manage.py runserver` no terminal dentro do ambiente do projeto (ou seja, após utilizar o comando no item 3.2.2), se tudo der certo receberá uma mensagem como essa:
+3.2.6 Para rodar o servidor utilize o comando `python manage.py runserver` no terminal dentro do ambiente do projeto (ou seja, após utilizar o comando no item 3.2.3), se tudo der certo receberá uma mensagem como essa:
 
       System check identified no issues (0 silenced).
       March 30, 2023 - 14:00:05
