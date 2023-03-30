@@ -8,11 +8,28 @@ from rest_framework.authtoken.views import ObtainAuthToken
 
 from .models import User
 import ipdb
-from .serializers import UserSerializer
+from .serializers import UserSerializer, PatchUserSerializer, DeleteUserSerializer
+from .permissions import IsAdminOrOwner
 
 class UserRegisterView(generics.ListCreateAPIView):
     serializer_class = UserSerializer
     queryset = User.objects.all()
+
+
+class UserDetailView(generics.RetrieveUpdateAPIView):
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAdminOrOwner]    
+    serializer_class = PatchUserSerializer
+    queryset = User.objects.all()
+    lookup_url_kwarg = "pk"
+
+
+class UserDeleteView(generics.UpdateAPIView):
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAdminUser]
+    serializer_class = DeleteUserSerializer
+    queryset = User.objects.all()
+    lookup_url_kwarg = "pk"
 
 class LoginView(ObtainAuthToken):
     
