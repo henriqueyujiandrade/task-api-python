@@ -32,7 +32,7 @@ Esse Teste consiste em um projeto Back End, onde é possível cadastrar um usuá
 ### 3.1 Requisitos
 
 - Python
-- Gerenciador de pactotes Pip
+- Gerenciador de pacotes Pip
 - Banco de dados PostgreSQL
 
 ### 3.2 Instalação
