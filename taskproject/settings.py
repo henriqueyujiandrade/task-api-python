@@ -43,8 +43,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "rest_framework",
     "rest_framework.authtoken",
+    "drf_spectacular",
     "users",
-    "tasks"
+    "tasks",
+    
 ]
 
 MIDDLEWARE = [
@@ -126,6 +128,17 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
+REST_FRAMEWORK = {
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'API Task Management Djangorestframkework 2023',
+    'DESCRIPTION': 'Projeto de criação e gerenciamento de tarefas',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False
+}
 
 
 # Static files (CSS, JavaScript, Images)
